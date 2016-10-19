@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
     selector: 'my-app',
-    template: '<h1>My first Angular 2 app</h1>'
+    templateUrl:'./app/app.component.html',
+    
+
 })
 export class AppComponent implements OnInit {
-    constructor() { }
+
+    constructor( ) {
+          
+     }
 
     ngOnInit() { }
 }

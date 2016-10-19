@@ -1,0 +1,40 @@
+  <header >
+<nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;TO DO List</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                     
+                            <li><a asp-controller="home" asp-action="index"><i class="fa fa-home"></i>All</a> </li>
+                            <li><a asp-controller="home" asp-action="active"><i class="fa fa-star-o"></i>Active</a> </li>
+                            <li><a asp-controller="home" asp-action="Completed"><i class="fa fa-star"></i>Completed</a> </li>
+                       
+                        <li><a asp-controller="misc" asp-action="about"><i class="fa fa-info-circle"></i>About</a> </li>
+                        <li><a asp-controller="misc" asp-action="contact"><i class="fa fa-comments-o"></i>Contact Us</a> </li>
+                    </ul>
+              
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><i class="glyphicon glyphicon-user"></i><span>JSSSSSSS</span></li>
+                            <li>&nbsp;</li>
+                            <li>
+                                <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm">
+                                    <a onclick="document.getElementById('logoutForm').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i>Log off</a>
+                                </form>
+
+                            </li>
+                        </ul>
+                  
+
+                </div>
+                </div>
+</nav>
+    </header>
