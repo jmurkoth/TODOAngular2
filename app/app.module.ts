@@ -1,4 +1,4 @@
-//entry point to the application
+// entry point to the application
 import { NgModule } from '@angular/core';
 import { BrowserModule  }   from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
@@ -8,11 +8,11 @@ import {HeaderComponent } from './shared/header.component';
 import {FooterComponent} from './shared/footer.component';
 
 @NgModule({
-    imports: [BrowserModule,FormsModule],
+    imports: [BrowserModule, FormsModule],
     exports: [],
-    declarations: [AppComponent, HeaderComponent,FooterComponent],
+    declarations: [AppComponent, HeaderComponent, FooterComponent],
     providers: [],
-    bootstrap:[AppComponent]
+    bootstrap: [AppComponent]
 })
 
 export class AppModule  { }

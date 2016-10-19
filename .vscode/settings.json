@@ -3,5 +3,7 @@
     "files.exclude": {
         "app/**/*.js": { "when": "$(basename).ts"}, // Exclude the js file from showing if it matches the ts file name
          "app/**/*.js.map": { "when": "$(basename)"}
-    }
+    },
+    "tslint.rulesDirectory": "./node_modules/codelyzer",
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
