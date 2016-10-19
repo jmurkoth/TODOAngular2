@@ -5,8 +5,8 @@
   "main": "systemjs.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" "
-  
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" \"gulp watch \" " ,
+    "lint": "gulp watch"
   },
   "author": "Jeevan Murkoth",
   "license": "MIT",
