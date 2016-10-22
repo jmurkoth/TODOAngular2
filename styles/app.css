@@ -14,7 +14,7 @@ body > aside{
   height: 100%;
   background-color:#eeeeee;
 }
-body> app-r >section{
+body> app-root >section{
    margin-top:60px;
 }
 body > section  > section > #formsection {
