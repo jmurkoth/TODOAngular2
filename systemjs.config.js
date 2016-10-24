@@ -23,7 +23,9 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'toastr': 'npm:toastr/build/toastr.min.js'
+      'toastr': 'npm:toastr/toastr.js',
+      'moment': 'npm:moment',
+      'jquery': 'npm:jquery/dist/jquery.min.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -37,6 +39,12 @@
       'angular-in-memory-web-api': {
         main: './index.js',
         defaultExtension: 'js'
+      },
+      moment:{
+         defaultExtension: 'js'
+      },
+       toastr:{
+         defaultExtension: 'js'
       }
     }
   });

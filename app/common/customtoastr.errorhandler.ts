@@ -1,7 +1,9 @@
 import { ErrorHandler  } from '@angular/core';
 import {WrappedError} from '@angular/core/src/facade/errors';
+import  * as toastr from 'toastr';
 
 export class CustomToastrErrorHandler implements ErrorHandler {
+private _toasterEnabled= true;
 
  constructor() {
      toastr.options = { positionClass: 'toast-bottom-right' , closeButton: true};
@@ -12,8 +14,12 @@ export class CustomToastrErrorHandler implements ErrorHandler {
     const originalStack = this._findOriginalStack(error);
     let exceptionValue = `ORIGINAL EXCEPTION: ${this._extractMessage(originalError)}`;
     let stackTraceValue = `ORIGINAL STACKTRACE: ${originalStack}`;
-    toastr.error(exceptionValue);
-    toastr.error(stackTraceValue);
+
+    if (this._toasterEnabled) {
+      toastr.error(exceptionValue);
+      toastr.error(stackTraceValue);
+    }
+
     console.error(exceptionValue );
     console.error(stackTraceValue );
   }
