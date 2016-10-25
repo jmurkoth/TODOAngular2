@@ -6,7 +6,8 @@ export class CustomToastrErrorHandler implements ErrorHandler {
 private _toasterEnabled= true;
 
  constructor() {
-     toastr.options = { positionClass: 'toast-bottom-right' , closeButton: true};
+     toastr.options.positionClass = 'toast-bottom-right';
+     toastr.options.closeButton = true;
  }
 
   handleError(error: any): void {
