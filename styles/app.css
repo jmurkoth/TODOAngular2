@@ -21,7 +21,7 @@ body > section  > section > #formsection {
    margin:auto;
 }
 
-.ul-todo > li{
+.todo > li{
         background-color:#ffc;
         margin: 1em;
         width: 10em;
@@ -31,7 +31,7 @@ body > section  > section > #formsection {
         padding:.5em;
         vertical-align: top;
 }
-.ul-todo > li.complete {
+.todo  > li.complete {
         background-color:#ffc;
         margin: 1em;
         width: 10em;
@@ -42,7 +42,7 @@ body > section  > section > #formsection {
         vertical-align: top;
         text-decoration:line-through;
 }
-.ul-todo > li> article >h2
+.todo > li> article >h2
 {
         font-family: 'Permanent Marker', cursive;
         margin-top: 5px;
@@ -51,20 +51,20 @@ body > section  > section > #formsection {
       -ms-word-break: break-word;
         word-break: break-word;
 }
-.ul-todo > li> article >form>button
+.todo > li> article >form>button
 {
         border-width:0;
         background-color:transparent;
         float:right;
 }
-.ul-todo  > li > article > p {
+.todo   > li > article > p {
         border-width: 0;
         background-color: transparent;
         float: left;
     -ms-word-break: break-word ;
         word-break: break-word ;
 }
-.ul-todo  > li > article > p.complete {
+.todo   > li > article > p.complete {
         border-width: 0;
         background-color: transparent;
         float: left;
@@ -72,7 +72,7 @@ body > section  > section > #formsection {
         word-break: break-word ;
         text-decoration:line-through;
 }
-.ul-todo > li> article >p.time
+.todo  > li> article >p.time
 {
         border-top-style: dashed;
         border-top-width: .1em;

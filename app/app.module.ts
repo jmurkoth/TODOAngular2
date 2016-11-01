@@ -12,6 +12,8 @@ import {FooterComponent} from './shared/footer.component';
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contactus/contact.component';
+import {AllToDoComponent } from './todos/alltodos.component';
+import {TodoComponent} from './todos/todo.component';
 
 import {CustomToastrErrorHandler} from './common/customtoastr.errorhandler';
 import {Logger} from './common/common.Logger';
@@ -21,7 +23,11 @@ import {AppRoutingModule} from './app.routing.module';
 @NgModule({
     imports: [BrowserModule, FormsModule, AppRoutingModule ],
     exports: [],
-    declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent, AboutComponent, ContactComponent],
+    declarations: [
+        AppComponent, HeaderComponent,
+        FooterComponent, HomeComponent,
+        AboutComponent, ContactComponent,
+        AllToDoComponent, TodoComponent],
     providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger}],
     bootstrap: [AppComponent]
 })
