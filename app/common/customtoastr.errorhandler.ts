@@ -20,9 +20,13 @@ private _toasterEnabled= true;
       toastr.error(exceptionValue);
       toastr.error(stackTraceValue);
     }
+    if (exceptionValue) {
+      console.error(exceptionValue );
+    }
+    if (stackTraceValue) {
+      console.error(stackTraceValue );
+    }
 
-    console.error(exceptionValue );
-    console.error(stackTraceValue );
   }
 
  _extractMessage(error: any): string {

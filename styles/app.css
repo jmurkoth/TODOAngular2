@@ -51,7 +51,7 @@ body > section  > section > #formsection {
       -ms-word-break: break-word;
         word-break: break-word;
 }
-.todo > li> article >form>button
+.todo > li> article >button
 {
         border-width:0;
         background-color:transparent;

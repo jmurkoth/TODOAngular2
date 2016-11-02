@@ -1,0 +1,6 @@
+<div class="alert {{cssClass}}" role="alert" *ngIf="!closed">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="onClose()" *ngIf="dismissable">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <ng-content></ng-content>
+</div>

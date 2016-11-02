@@ -12,12 +12,16 @@
      <link href="node_modules/toastr/build/toastr.min.css" rel="stylesheet" type="text/css"></link>
      <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
+    <!-- build:vendor -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- endbuild -->
     <!-- 2. Configure SystemJS -->
+    <!-- build:app -->
     <script src="systemjs.config.js"></script>
+    <!-- endbuild -->
     <script>
       System.import('app').catch(function(err){ console.error(err); });
     </script>

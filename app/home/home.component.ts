@@ -11,7 +11,12 @@ export class HomeComponent implements OnInit {
     constructor(public logger: Logger) {
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
             this.logger.info('Home Component  Initialized');
      }
+
+     onAlertClose(): void {
+         this.logger.info('alert closed');
+     }
+
 }

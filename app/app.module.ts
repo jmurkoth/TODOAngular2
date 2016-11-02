@@ -20,8 +20,10 @@ import {Logger} from './common/common.Logger';
 import {ConsoleLogger} from './common/console.loggerservice';
 import {AppRoutingModule} from './app.routing.module';
 
+import { AlertModule } from './common/alert/alert.module';
+
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule ],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, AlertModule ],
     exports: [],
     declarations: [
         AppComponent, HeaderComponent,
