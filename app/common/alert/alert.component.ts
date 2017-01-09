@@ -1,10 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+ /* tslint:disable:component-selector-prefix component-selector-name */
 @Component({
     moduleId: module.id,
     selector: 'alert',
     templateUrl: 'alert.component.html'
 })
+ /* tslint:enable:component-selector-prefix  component-selector-name */
 export class AlertComponent implements OnInit {
 
     @Input() type: AlertType = AlertType.info;
