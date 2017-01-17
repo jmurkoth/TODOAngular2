@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
  /* tslint:disable:component-selector-prefix component-selector-name */
 @Component({
-    moduleId: module.id,
     selector: 'alert',
     templateUrl: 'alert.component.html'
 })

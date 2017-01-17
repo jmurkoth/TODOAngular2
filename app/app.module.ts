@@ -21,9 +21,10 @@ import {ConsoleLogger} from './common/console.loggerservice';
 import {AppRoutingModule} from './app.routing.module';
 
 import { AlertModule } from './common/alert/alert.module';
+ import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule, AlertModule ],
+    imports: [BrowserModule, FormsModule, AppRoutingModule, AlertModule, ToastModule ],
     exports: [],
     declarations: [
         AppComponent, HeaderComponent,
