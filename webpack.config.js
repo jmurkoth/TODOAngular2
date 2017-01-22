@@ -5,6 +5,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var webpack = require('webpack');
 
 module.exports ={
+    devtool: 'source-map',
     entry: {
         'app': './app/main.ts',
         'vendor': './app/vendor.ts',
@@ -14,7 +15,7 @@ module.exports ={
     },
     output: {
         path: __dirname+'/dist',
-        filename: '[name].bundle.js',
+        filename: '[chunkhash].[name].js',
         publicPath: '/'
     },
     devServer:{
@@ -51,7 +52,7 @@ module.exports ={
     },
     plugins:[
         new webpack.optimize.CommonsChunkPlugin({
-                name: ['vendor','app']
+                name: ['vendor','app', 'polyfills']
             }),
         new CleanWebpackPlugin(
                 ['dist'], {
