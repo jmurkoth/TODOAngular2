@@ -1,4 +1,4 @@
-import { Injectable,Injector } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { ErrorHandler  } from '@angular/core';
 import {WrappedError} from '@angular/core/src/facade/errors';
 import { ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
