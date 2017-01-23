@@ -1,5 +1,6 @@
 // entry point to the application
-
+// We use this to change angular 2 to use the the classic hash strategy
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 // all the standard pieces
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule  }   from '@angular/platform-browser';
@@ -26,7 +27,8 @@ import {HomeModule} from './home/home.module';
     imports: [BrowserModule, FormsModule, AppRoutingModule,  ToastModule , AboutModule, ContactModule, HomeModule ],
     exports: [],
     declarations: [AppComponent, HeaderComponent, FooterComponent],
-    providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger}],
+    providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 
