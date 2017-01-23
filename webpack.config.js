@@ -9,6 +9,7 @@ module.exports ={
     entry: {
         'app': './app/main.ts',
         'vendor': './app/vendor.ts',
+        'polyfills':'./app/polyfills.ts'
     },
     resolve: {
         extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
@@ -51,8 +52,9 @@ module.exports ={
             exprContextCritical: false
     },
     plugins:[
+       // new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-                name: ['vendor','app', 'polyfills']
+                name: ['app','vendor','polyfills']
             }),
         new CleanWebpackPlugin(
                 ['dist'], {
