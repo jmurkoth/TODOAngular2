@@ -1,5 +1,6 @@
 node_modules
 typings
+aot
 bower_components
 **/app/**/*.js
 **/app/**/*.map

@@ -1,15 +1,23 @@
+import { Injectable, Injector } from '@angular/core';
 import { ErrorHandler  } from '@angular/core';
 import {WrappedError} from '@angular/core/src/facade/errors';
-import  * as toastr from 'toastr';
+import { ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
 
+@Injectable()
 export class CustomToastrErrorHandler implements ErrorHandler {
 private _toasterEnabled= true;
+private _options: ToastOptions;
 
- constructor() {
-     toastr.options.positionClass = 'toast-bottom-right';
-     toastr.options.closeButton = true;
+
+ constructor( private injector: Injector ) {
+   this._options = new ToastOptions({
+  closeButton: true,
+  positionClass: 'toast-bottom-right',
+});
  }
-
+public get Toastr(): ToastsManager {
+     return this.injector.get(ToastsManager);
+  }
   handleError(error: any): void {
     const originalError = this._findOriginalError(error);
     const originalStack = this._findOriginalStack(error);
@@ -17,8 +25,8 @@ private _toasterEnabled= true;
     let stackTraceValue = `ORIGINAL STACKTRACE: ${originalStack}`;
 
     if (this._toasterEnabled) {
-      toastr.error(exceptionValue);
-      toastr.error(stackTraceValue);
+      this.Toastr.error(exceptionValue, 'Error', this._options);
+      this.Toastr.error(stackTraceValue, 'Error', this._options);
     }
     if (exceptionValue) {
       console.error(exceptionValue );
@@ -30,7 +38,7 @@ private _toasterEnabled= true;
   }
 
  _extractMessage(error: any): string {
-    return error instanceof Error ? error.message : error.toString();
+    return error instanceof Error ? error.message : '';
   }
 
   _findOriginalError(error: any): any {

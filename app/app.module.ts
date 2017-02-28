@@ -1,5 +1,6 @@
 // entry point to the application
-
+// We use this to change angular 2 to use the the classic hash strategy
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 // all the standard pieces
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule  }   from '@angular/platform-browser';
@@ -9,28 +10,25 @@ import { FormsModule }   from '@angular/forms';
 import {AppComponent} from './app.component';
 import {HeaderComponent } from './shared/header.component';
 import {FooterComponent} from './shared/footer.component';
-import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about/about.component';
-import {ContactComponent} from './contactus/contact.component';
-import {AllToDoComponent } from './todos/alltodos.component';
-import {TodoComponent} from './todos/todo.component';
 
 import {CustomToastrErrorHandler} from './common/customtoastr.errorhandler';
 import {Logger} from './common/common.Logger';
 import {ConsoleLogger} from './common/console.loggerservice';
+// Routes
 import {AppRoutingModule} from './app.routing.module';
 
-import { AlertModule } from './common/alert/alert.module';
+// Modules
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
+import {AboutModule} from './about/about.module';
+import {ContactModule} from './contactus/contact.module';
+import {HomeModule} from './home/home.module';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule, AlertModule ],
+    imports: [BrowserModule, FormsModule, AppRoutingModule,  ToastModule , AboutModule, ContactModule, HomeModule ],
     exports: [],
-    declarations: [
-        AppComponent, HeaderComponent,
-        FooterComponent, HomeComponent,
-        AboutComponent, ContactComponent,
-        AllToDoComponent, TodoComponent],
-    providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger}],
+    declarations: [AppComponent, HeaderComponent, FooterComponent],
+    providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
 

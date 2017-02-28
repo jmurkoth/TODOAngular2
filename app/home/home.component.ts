@@ -3,9 +3,8 @@ import { Logger } from '../common/common.Logger';
 
 
 @Component({
-    moduleId: module.id,
     selector: 'app-home',
-    templateUrl: '/app/home/home.component.html'
+    templateUrl: 'home.component.html'
 })
 export class HomeComponent implements OnInit {
     constructor(public logger: Logger) {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ITodoItem} from './ITodoItem';
 
 @Component({
-    moduleId: module.id,
     selector: 'app-todo-all',
     templateUrl: 'alltodos.component.html'
 })

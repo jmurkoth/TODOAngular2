@@ -3,7 +3,6 @@ import {ITodoItem} from './ITodoItem';
 import { Logger } from '../common/common.Logger';
  /* tslint:disable:component-selector-name component-selector-type */
 @Component({
-    moduleId: module.id,
     selector: '[app-todo]',
     templateUrl: 'todo.component.html'
 })
