@@ -6,7 +6,7 @@
   "scripts": {
     "ngc": "ngc -p ./tsconfig-aot.json",
     "webpack": "webpack",
-    "lint": "gulp watch",
+    "lint": " node_modules\\.bin\\tslint -c tslint.json app/**/*.ts",
     "serve-dev": "webpack-dev-server --progress --colors "
   },
   "author": "Jeevan Murkoth",
@@ -47,8 +47,6 @@
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "gulp": "^3.9.1",
-    "gulp-tslint": "^6.1.2",
     "html-webpack-plugin": "^2.26.0",
     "lite-server": "^2.2.2",
     "raw-loader": "^0.5.1",
