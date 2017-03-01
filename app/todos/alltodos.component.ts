@@ -6,11 +6,11 @@ import {ITodoItem} from './ITodoItem';
     templateUrl: 'alltodos.component.html'
 })
 export class AllToDoComponent implements OnInit {
-   public AllTodos: ITodoItem[];
+   public allTodos: ITodoItem[];
     constructor() { }
 
     ngOnInit() {
-    this.AllTodos = [
+    this.allTodos = [
         {
             Id: '1',
             Title: 'My First Todo',

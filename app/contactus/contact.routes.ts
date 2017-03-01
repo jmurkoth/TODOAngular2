@@ -6,4 +6,4 @@ const routes: Routes = [
     { path: 'contact', component: ContactComponent }
 ];
 
-export const ContactRoutes = RouterModule.forChild(routes);
+export const contactRoutes = RouterModule.forChild(routes);

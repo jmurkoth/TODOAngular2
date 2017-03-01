@@ -1,5 +1,7 @@
 <h1>All todos go here </h1>
-{{AllTodos.length}}
+{{allTodos.length}}
 <ul  class="todo">
-        <li app-todo *ngFor="let todo of AllTodos" [Todo]="todo" ></li>
+        <li  *ngFor="let todo of allTodos"  >
+                <app-todo [todo]="todo"></app-todo>
+        </li>
 </ul>

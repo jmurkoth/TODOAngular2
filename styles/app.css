@@ -42,7 +42,7 @@ body > section  > section > #formsection {
         vertical-align: top;
         text-decoration:line-through;
 }
-.todo > li> article >h2
+.todo > li> app-todo > article >h2
 {
         font-family: 'Permanent Marker', cursive;
         margin-top: 5px;
@@ -51,20 +51,20 @@ body > section  > section > #formsection {
       -ms-word-break: break-word;
         word-break: break-word;
 }
-.todo > li> article >button
+.todo > li> app-todo > article >button
 {
         border-width:0;
         background-color:transparent;
         float:right;
 }
-.todo   > li > article > p {
+.todo   > li >app-todo > article > p {
         border-width: 0;
         background-color: transparent;
         float: left;
     -ms-word-break: break-word ;
         word-break: break-word ;
 }
-.todo   > li > article > p.complete {
+.todo   > li > app-todo > article > p.complete {
         border-width: 0;
         background-color: transparent;
         float: left;
@@ -72,7 +72,7 @@ body > section  > section > #formsection {
         word-break: break-word ;
         text-decoration:line-through;
 }
-.todo  > li> article >p.time
+.todo  > li> app-todo > article >p.time
 {
         border-top-style: dashed;
         border-top-width: .1em;

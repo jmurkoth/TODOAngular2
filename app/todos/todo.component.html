@@ -5,7 +5,7 @@
             <button (click)="onMarkComplete($event)" ><i class="glyphicon glyphicon-star-empty"></i></button>
             <button class="form-inline" (click)="onEdit($event)" ><i class="glyphicon glyphicon-edit"></i></button>
       <br/>
-            <h2>{{Todo?.Title}}</h2>
-            <p class="">{{Todo?.Description}}</p>
-            <p class="time">{{Todo?.CreatedDate | date: 'MMM dd yyyy hh:mm'}}</p>
+            <h2>{{todo?.Title}}</h2>
+            <p class="">{{todo?.Description}}</p>
+            <p class="time">{{todo?.CreatedDate | date: 'MMM dd yyyy hh:mm'}}</p>
     </article>

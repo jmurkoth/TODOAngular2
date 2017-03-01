@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes , RouterModule} from '@angular/router';
 import {HomeComponent} from './home/home.component';
-import {ContactRoutes} from './contactus/contact.routes';
-import {AboutRoutes} from './about/about.routes';
+import {contactRoutes} from './contactus/contact.routes';
+import {aboutRoutes} from './about/about.routes';
 // Array of all the routes of the application
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), AboutRoutes, ContactRoutes],
+  imports: [RouterModule.forRoot(routes), aboutRoutes, contactRoutes],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
