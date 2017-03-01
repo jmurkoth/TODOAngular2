@@ -30,7 +30,7 @@ git clone https://github.com/jmurkoth/TODOAngular2.git
     npm run serve-dev
 ```
 ## Reference
-* [Linting](/docs/linting/linting.md)
+* [Linting](/Docs/Linting/LINTING.md)
 
 [1]: https://angular.io/docs/ts/latest/cookbook/aot-compiler.html/
 [2]: https://webpack.js.org/
