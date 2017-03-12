@@ -10,10 +10,9 @@ private _options: ToastOptions;
 
 
  constructor( private injector: Injector ) {
-   this._options = new ToastOptions({
-  closeButton: true,
-  positionClass: 'toast-bottom-right',
-});
+   this._options = new ToastOptions();
+   this._options.showCloseButton = true;
+   this._options.positionClass = 'toast-bottom-right';
  }
 public get Toastr(): ToastsManager {
      return this.injector.get(ToastsManager);

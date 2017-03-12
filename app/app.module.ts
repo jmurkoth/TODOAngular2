@@ -24,7 +24,7 @@ import {ContactModule} from './contactus/contact.module';
 import {HomeModule} from './home/home.module';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, AppRoutingModule,  ToastModule , AboutModule, ContactModule, HomeModule ],
+    imports: [BrowserModule, FormsModule, AppRoutingModule,  ToastModule.forRoot() , AboutModule, ContactModule, HomeModule ],
     exports: [],
     declarations: [AppComponent, HeaderComponent, FooterComponent],
     providers: [{provide: ErrorHandler, useClass: CustomToastrErrorHandler}, {provide: Logger, useClass: ConsoleLogger},
