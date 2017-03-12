@@ -6,8 +6,8 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Injectable()
 export class ConsoleLogger implements ILogger {
-    private _logPrefix: string = 'ANGULAR2';
-    private _isToastrEnabled: boolean = true;
+    private _logPrefix = 'ANGULAR2';
+    private _isToastrEnabled = true;
 
 constructor( private injector: Injector) {}
     public info(...args: any[]): void {

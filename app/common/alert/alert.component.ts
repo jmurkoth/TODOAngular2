@@ -8,9 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class AlertComponent implements OnInit {
 
     @Input() type: AlertType = AlertType.info;
-    @Input() dismissable: boolean = true;
+    @Input() dismissable = true;
     @Output() close: EventEmitter<AlertComponent> = new EventEmitter<AlertComponent>();
-    closed: boolean= false;
+    closed= false;
 
     cssClass: string;
     constructor() { }
