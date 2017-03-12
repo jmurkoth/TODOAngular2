@@ -1,5 +1,7 @@
 # TODO Application using Angular2
 This is a sample application intended to learn Angular2. 
+## Build Status
+Build Status from VSTS : <img src='https://oriontfs.visualstudio.com/_apis/public/build/definitions/962f430c-5a90-43b9-a5ee-b17280adf1f2/3/badge'/>
 ## Goals
 These are the high level goals
 * Learn Angular2
