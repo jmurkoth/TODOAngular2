@@ -17,6 +17,7 @@ These are the high level goals
 ### 1. Prerequisites
 * Ensure that you have git installed on your machine
 * Make sure that you have node and npm installed
+* Make sure that you have yarn installed
 
 ### 2. Clone the repository
 ```shell
@@ -25,7 +26,7 @@ git clone https://github.com/jmurkoth/TODOAngular2.git
 ### 2. Install the dependencies
 ``` shell
     cd TODOAngular2
-    npm i
+    yarn 
 ```
 ### 3. Run the application
 ``` shell
